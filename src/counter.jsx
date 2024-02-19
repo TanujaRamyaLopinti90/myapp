@@ -1,6 +1,5 @@
  
-import React from './react';
-
+import React from "react"
 
    function Counter(){
     var [c,SetC]=React.useState(0)
@@ -24,5 +23,8 @@ return(
 )
     }
  export default Counter
+ 
+
+
     
 
