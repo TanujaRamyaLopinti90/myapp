@@ -1,14 +1,12 @@
 import './App.css';
-import Counter from './counter';
-import Todolist from './Todolist';
 import React from 'react';
+import Todolist from './todolist';
 
 function App() {
   return (
-    <div className="App">
+    <div className="Tanu">
       <h1>hello</h1>
-     <Counter/>
-     <Todolist></Todolist>
+      <Todolist></Todolist>
     </div>
   );
 }
