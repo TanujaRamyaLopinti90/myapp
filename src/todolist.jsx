@@ -4,6 +4,11 @@ function Todolist() {
     function abc(){
         setarr([...arr,document.getElementById("d1").value])
     }
+    function del(i){
+        var temp=[...arr]
+        temp.splice(i,1)
+        setarr([...temp])
+    }
     
     return (
         <div>
@@ -12,8 +17,10 @@ function Todolist() {
             <button onClick={abc}>ADD TODO</button>
 
             {
-                arr.map((a)=> {
-                    return <li>{a}</li>
+                arr.map((a,index)=> {
+                    return <li>{a}
+                    <button onClick={()=>{del(index)}}>Delete</button>
+                    </li>
                 })
             }
         </div>
