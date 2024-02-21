@@ -4,6 +4,7 @@ function Todolist() {
     function abc(){
         setarr([...arr,document.getElementById("d1").value])
     }
+    
     return (
         <div>
             <h1>TODOLIST</h1>
