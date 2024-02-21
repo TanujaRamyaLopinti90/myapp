@@ -1,10 +1,15 @@
 import React from "react";
 
-function abc(){
+function Todolist(){
     var [arr,setArr]=React.useState([])
     function abc(){
         console.log(arr)
         setArr([...arr,document.getElementById("d1").value])
+    }
+    function del(i){
+      var temp=[...arr]
+      temp.splice(i,1)
+      setArr([...temp])
     }
       return(
         <div>
@@ -12,9 +17,11 @@ function abc(){
             <input type="text" id="d1"/>
             <button onClick={abc}>ADD TODO</button>
           {
-            arr.map((a)=>{
+            arr.map((a,index)=>{
                 return (
-                 <li>{a}</li>
+                 <li>{a}
+                 <button onClick={()=>{del(index)}}>DELETE</button>
+                 </li>
                 )
             })
           }
