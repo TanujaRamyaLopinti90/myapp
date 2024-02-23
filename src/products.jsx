@@ -1,5 +1,5 @@
 import axios from "axios"
-import React, { useEffect } from "react";
+import React  from "react"
 import ProductCart from "./cart.jsx"
 
 
@@ -44,7 +44,7 @@ function Products(){
                 })
                }
         </div>
-        <div className="border border-dark" >
+        <div className="border border-dark" id="t1" >
         <ProductCart  cartitems={cartitems}></ProductCart>
         </div>
         </div>

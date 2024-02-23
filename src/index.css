@@ -10,24 +10,32 @@
   background-color: #04AA6D;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  /* box-shadow: 2px 5px 10px #999; */
  
 }
-.App{
+/* .App{
   background-color: rgb(78, 115, 126);
-}
-#d1{
-  background-color: #ada81d;
+} */          
+#d1{  
+  /* background-color: dodgerblue; */
+  background:linear-gradient(red,skyblue) ;
+  /* background-color: antiquewhite; */
+ box-shadow:3px 5px 10px;
 }
 #a1{
-  background-color: aliceblue;
+  background-color:lightgray;
+  box-shadow:3px 5px 10px;
 }
 #r1{
   width: 250px;
   height: 250px;
   border-radius: 30%;
-  justify-content: center;
-  background-color: darkgrey;
+  /* justify-content: center; */
+  /* background-color:; */
+}
+#t1{
+  /* background-color:lightsalmon; */
+  box-shadow:3px 5px 10px crimson;
 }
 
 
