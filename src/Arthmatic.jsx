@@ -8,7 +8,7 @@ function Arth(){
         ref1.current.focus();
     },[])
     function add(){
-     setRes(+ref1.current.value +ref2.current.value)
+     setRes(+ref1.current.value+ +ref2.current.value)
     }
 
     return(

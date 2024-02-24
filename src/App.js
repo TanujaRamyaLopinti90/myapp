@@ -1,14 +1,14 @@
 
 import './App.css';
 import Arth from './Arthmatic';
-import Counter from './counter';
+// import Counter from './counter';
 
 
 function App() {
   return (
     <div className="mybox">
       <h1>HELLO</h1>
-      <Counter></Counter>
+      {/* <Counter></Counter> */}
       <Arth></Arth>
     
     </div>
