@@ -7,18 +7,30 @@ import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 import Counter from './counter'
 import  Todo  from './todo';
+import Countries from './countries';
+import CountryDetails from './CountryDetails';
 const router = createBrowserRouter([
   {
     path: "/",
     element:<App />,
     children:[
       {
-        path:"/counter",
+        path:"counter",
         element:<Counter></Counter>
       },
       {
-        path:"/todo",
+        path:"todo",
         element:<Todo></Todo>
+      },
+      {
+        path:"countries",
+        element:<Countries></Countries>,
+        children:[
+          {
+            path:'details/:cname',
+            element:<CountryDetails></CountryDetails>
+          }
+        ]
       }
 
     ]
