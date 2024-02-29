@@ -18,7 +18,7 @@ import React from "react";
     var temp=[...todo]
     temp[index].status=true
     setTodo([...temp])
- }
+ } 
 
     return(
 <div>
@@ -35,4 +35,4 @@ import React from "react";
    }
    </div>
     )}
- export default Todolist
+ export default React.memo(Todolist)
