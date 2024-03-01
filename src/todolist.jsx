@@ -4,7 +4,11 @@ import React from "react";
     var inp=React.useRef('')
 
  function addtodo(){
-  setTodo([...todo,inp.current.value])
+   let newtd={
+      title:inp.current.value,
+      status:false
+     }
+  setTodo([...todo,newtd])
   inp.current.value=""
  }
 
@@ -14,11 +18,16 @@ import React from "react";
   setTodo([...temp])
  }
 
- function done(index){
+ function done(ind){
     var temp=[...todo]
-    temp[index].status=true
+    temp[ind].status=true
     setTodo([...temp])
  } 
+ function undo(ind){
+   var temp=[...todo]
+   temp[ind].status=false
+   setTodo([...temp])
+ }
 
     return(
 <div>
@@ -27,9 +36,9 @@ import React from "react";
    <button onClick={(()=>{addtodo()})}>ADD</button>
    {
     todo.map((T,index)=>{
-        return<li className={T.status===true?"text-decoration-line-through":""}>{T}
-     <button onClick={()=>{del()}}>DELETE</button>   
-     <button onClick={()=>{done()}}>DONE</button>   
+        return<li className={T.status===true?"text-decoration-line-through":""}>{T.title}
+   {T.status===true?(<button onClick={()=>{undo(index)}}>UNDO</button>):(<button onClick={()=>{done(index)}}>DONE</button>)}
+  <button onClick={()=>{del(index)}}>DELETE</button> 
         </li>
     })
    }
