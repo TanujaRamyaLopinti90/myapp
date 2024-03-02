@@ -42,7 +42,7 @@ function Products(){
                           </div>
                     )
                 })
-               }
+               } 
         </div>
         <div className="border border-dark" id="t1" >
         <ProductCart  cartitems={cartitems}></ProductCart>
