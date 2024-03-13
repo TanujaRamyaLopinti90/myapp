@@ -9,9 +9,9 @@ function Counter(){
     return(
         <div className="border border-primary m-2 m-2 p-2">
             <h2>COUNTER:{count}</h2>
-            <button onClick={()=>{dispatch(inc())}}>Increment</button>
-            <button onClick={()=>{dispatch(dec())}}>Decrement</button>
-            <button onClick={()=>{dispatch(reset())}}>Reset</button>
+            <button onClick={()=>{dispatch(inc())}} className="btn btn-outline-success p-2 m-2">Increment</button>
+            <button onClick={()=>{dispatch(dec())}}  className="btn btn-outline-danger p-2 m-2">Decrement</button>
+            <button onClick={()=>{dispatch(reset())}}  className="btn btn-outline-warning p-2 m-2">Reset</button>
         </div>
     )
 }

@@ -11,13 +11,13 @@ function Todolist(){
     return(
         <div className="border border-secondary m-2 m-2 p-2">
             <h2>TODOLISt</h2>
-            <input type="text" onChange={(e)=>{setNewtodo(e.target.value)}}/>
-            <button onClick={()=>{dispatch(addTodo(newtodo))}}>Add Todo</button>
+            <input type="text" onChange={(e)=>{setNewtodo(e.target.value)}}  className="btn btn-outline-primary p-2 m-2" />
+            <button onClick={()=>{dispatch(addTodo(newtodo))}}  className="btn btn-secondary p-2 m-2"> Add Todo</button>
             {
                 todolist?.map((t,i)=>{
                 return<li>
                     {t}
-            <button onClick={()=>{dispatch(deleteTodo(i))}}>Delete</button>
+            <button onClick={()=>{dispatch(deleteTodo(i))}}  className="btn btn-info p-2 m-2">Delete</button>
                     </li>
                 })
             }
