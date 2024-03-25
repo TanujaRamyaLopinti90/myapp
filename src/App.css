@@ -1,38 +1,32 @@
-.App {
-  text-align: center;
+.formMain{
+  width: 30%;
+  margin: 9% auto;
+}
+.formMain b{
+  color: coral;
+  margin-left: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.formMainreg{
+  width: 30%;
+  margin: 5% auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.formMainreg b{
+  color:palevioletred;
+  margin-left: 5px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.btags b{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.image{
+  height: 92vh;
+  width: 100%;
+  background-image: url(https://wallpapers.com/images/hd/housekeeper-carrying-cleaning-tools-2be7p8p66oyoo68t.jpg);
+  background-size: cover;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#a1{
+  
+  text-align: left;
+  padding: 200px 200px;
+  
 }

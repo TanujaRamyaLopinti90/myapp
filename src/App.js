@@ -1,13 +1,16 @@
 import React from 'react';
-import Login from './features/login/login';
+
+import Nav from './features/Nav';
+import './App.css'
+import { Outlet } from 'react-router';
 
 function App() {
   return (
     <div className="mybox">
-     <h1>PROJECT</h1>
-      <Login></Login>
-      
-      
+    
+         <Nav></Nav>
+        <Outlet></Outlet>
+       
     </div>
   );
 }

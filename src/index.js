@@ -3,14 +3,45 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { store } from './App/store'
+import { store } from './APP/store'
 import { Provider } from 'react-redux'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Login from './features/login/login';
+import Register from './features/register/register';
+import Home from './features/Home';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App></App>,
+    children:[
+      {
+        path:'/',
+        element:<Home></Home>
+      },
+     {
+      path:'/login',
+      element:<Login></Login>
+      
+     },
+     {
+       path:'/register',
+       element:<Register></Register>
+     }
+      
+    ]
+
+  },
+]);
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-  <App />
+   <RouterProvider router={router} />
 </Provider>,
 );
 
